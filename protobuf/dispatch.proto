@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package dispatch;
+
+option go_package = "./../grpc-go/";
+
+message DispatchReq {
+  string domain = 1;
+  string ip = 2;
+}
+
+message DispatchRes {
+  repeated string ips = 1;
+  string cname = 2;
+  string message = 3;
+}
+
+
+service Dispatch {
+  rpc GetDispatch(DispatchReq) returns (DispatchRes);
+}
