@@ -1,4 +1,4 @@
-module github.com/hc6078/go-protobuf
+module github.com/vrieske/go-protobuf
 go 1.20
 
 require (
